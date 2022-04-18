@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: data-spider
+  datasource:
+    url: jdbc:mysql://119.3.85.40:3306/datacenter?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: lkj582059
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      innitial-size: 5
+      max-active: 10
+      mid-idle: 5
+      max-wait: 30000
+      pool-prepared-statements: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
